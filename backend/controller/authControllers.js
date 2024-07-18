@@ -1,98 +1,84 @@
-const { userModel } = require('../model/userModel'); // Adjust the path as necessary
-const bcrypt = require('bcrypt'); // Ensure using bcryptjs as it's more common
-const jwt = require('jsonwebtoken'); // Assuming you will use JWT for authentication
+const { userModel } = require('../model/userModel'); 
+const jwt = require('jsonwebtoken'); 
 const dotenv = require('dotenv');
 
 dotenv.config();
 
-const generateJWT = (user) => {
+const generateJWTToken = (obj) => {
     try {
         const token = jwt.sign(
             {
-                exp: Math.floor(Date.now() / 1000) + 120, // 120 seconds from now
-                data: {
-                    userId: user._id,
-                    email: user.email
-                }
+                exp: 120, // seconds
+                data: obj
             },
             process.env.JWT_SECRET_KEY
         );
         return token;
+
     } catch (error) {
         console.error("Error generating JWT:", error);
         return null;
     }
 }
 
-
-
 const signUp = async (req, res) => {
     try {
-        const {  email, password } = req.body;
+        const { email, password } = req.body;
 
         // Log the request body
         console.log(req.body);
 
-        if(!email || !password ){
+        if (!email || !password) {
             return res.status(400).json({
                 status: "fail",
-                message: "email and password is required"
-            })
+                message: "Email and password are required",
+                data: {}
+            });
         }
-
-        
 
         // Check if the email already exists
         const existingUser = await userModel.findOne({ email });
         if (existingUser) {
             return res.status(400).json({
                 status: 'fail',
-                message: 'User already exists'
+                message: 'User already exists',
+                data: {}
             });
         }
 
-        // Hash the password
-        const hashedPassword = await bcrypt.hash(password, 12);
+        // Create a new user (password will be hashed in the pre-save hook)
+        const user = await userModel.create({ email, password });
 
-        // Create a new user
-        const newUser = await userModel.create({
-           
-            email,
-            password: hashedPassword
-        });
-
-        // Return success response with the new user's id
         res.status(201).json({
             status: 'success',
             message: 'User created',
             data: {
                 user: {
-                    id: newUser._id,
-                    
-                    email: newUser.email
+                    _id: user._id,
+                    email: user.email,
+                    isEmailVerified: user.isEmailVerified
                 }
             }
         });
-    } 
-    catch (error) {
+    } catch (error) {
         res.status(500).json({
             status: 'error',
-            message: error.message
+            message: error.message,
+            data: error
         });
     }
 };
-
 
 const logIn = async (req, res) => {
     console.log(req.body);
     try {
         const { email, password } = req.body;
 
-        if(!email || !password){
+        if (!email || !password) {
             return res.status(400).json({
                 status: "fail",
-                message: "Name, email and password is required"
-            })
+                message: "Email and password are required"
+            });
         }
 
         // Check if the email exists
@@ -100,19 +86,21 @@ const logIn = async (req, res) => {
         if (!user) {
             return res.status(401).json({
                 status: 'fail',
-                message: 'Invalid email or password'
+                message: 'Invalid user',
+                data:{}
             });
         }
 
-        // Check if the password is correct
-        const hashedPassword = user.password;
-        const isPasswordCorrect = await bcrypt.compare(password, hashedPassword);
+         // Check if the password is correct
+        const isPasswordCorrect = await user.verifyPassword(password, user.password)
         if (!isPasswordCorrect) {
             return res.status(401).json({
                 status: 'fail',
-                message: 'Invalid password'
+                message: 'Invalid password',
+                data: {}
             });
         }
+        
 
         // Log in the user
         res.status(200).json({
@@ -121,20 +109,20 @@ const logIn = async (req, res) => {
             data: {
                 user: {
                     name: user.name,
-                    email: user.email,
+                    email: user.email
                 },
-                token: generateJWT(user)  
-            },
-            
+                token: generateJWTToken({
+                    _id: user._id, 
+                    email: user.email 
+                }) 
+            }
         });
-    } 
-    catch (error) {
+    } catch (error) {
         res.status(500).json({
             status: 'error',
             message: error.message
         });
     }
 };
-
 
 module.exports = { signUp, logIn };
