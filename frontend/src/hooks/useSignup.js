@@ -1,8 +1,8 @@
 const useSignup = () => {
     const signup = async ({ email, password }) => {
       try {
-        const URL = `${process.env.BACKEND_URL}/api/v1/auth/signup`;
-        const res = await fetch(URL, {
+        const URL = process.env.BACKEND_URL;
+        const res = await fetch(`${URL}/api/v1/auth/signup`, {
           method: 'POST',
           body: JSON.stringify({ email, password }),
           headers: {

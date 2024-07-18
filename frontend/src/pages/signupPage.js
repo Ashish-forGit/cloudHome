@@ -43,6 +43,7 @@ const SignupPage = () => {
 
   return (
     <div className="signup-container">
+     <img src="../img/logo.png" alt="cloudHome." className="logo"/>
       <input
         type="text"
         placeholder="Email"
