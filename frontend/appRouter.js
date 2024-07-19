@@ -6,9 +6,10 @@ import appStore from "./src/store/appStore";
 import LoginPage from "./src/pages/loginPage";
 import SignupPage from "./src/pages/signupPage";
 import HomePage from "./src/pages/homePage";  // Import your HomePage component
+import OtpPage from "./src/pages/otpPage";
 
 const AppRouter = () => {
-  const { isAuthorized } = useSelector((e) => e.auth);
+  const { isAuthorized, isEmailVerified } = useSelector((e) => e.auth);
 
   const router = createBrowserRouter([
     {
@@ -20,8 +21,14 @@ const AppRouter = () => {
       element: isAuthorized ? <Navigate to="/" /> : <SignupPage/>
     },
     {
+      path: "/otp",
+      element: isAuthorized && !isEmailVerified ? <OtpPage/> : <Navigate to="/" />
+    },
+    {
       path: "/",
-      element: isAuthorized ? <HomePage /> : <Navigate to="/login" />
+      element: isAuthorized ? 
+                            <> isEmailVerified ? <HomePage/> : <Navigate to="/otp" /> </> 
+                             : <Navigate to="/login" />
     }
   ]);
 

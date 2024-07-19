@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import useSignup from '../hooks/useSignup';
-import '../../SignupPage.css';
+import '../../SignupPage.css'; // Adjust the path if necessary
 
 const SignupPage = () => {
   const [email, setEmail] = useState('');
@@ -42,25 +42,27 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="signup-container">
-     <img src="../img/logo.png" alt="cloudHome." className="logo"/>
-      <input
-        type="text"
-        placeholder="Email"
-        className="signup-input"
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      {emailError && <div className="error-message">{emailError}</div>}
-      <input
-        type="password"
-        placeholder="Password"
-        className="signup-input"
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      {passwordError && <div className="error-message">{passwordError}</div>}
-      <button onClick={handleSubmit} className="signup-button">
-        Sign Up
-      </button>
+    <div className="signup-page">
+      <div className="signup-container">
+        <img src="../img/logo.png" alt="cloudHome." className="logo" />
+        <input
+          type="text"
+          placeholder="Email"
+          className="signup-input"
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        {emailError && <div className="error-message">{emailError}</div>}
+        <input
+          type="password"
+          placeholder="Password"
+          className="signup-input"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        {passwordError && <div className="error-message">{passwordError}</div>}
+        <button onClick={handleSubmit} className="signup-button">
+          Sign Up
+        </button>
+      </div>
     </div>
   );
 };

@@ -3,9 +3,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 24px;
-    background-color: yellow;
+    background-color: bisque;
+
+    button {
+        background-color: brown;
+        padding: 5px;
+        color: white;
+        border-radius: 7px;
+    }
 }
 
-button {
-    background-color: brown;
-}

@@ -1,0 +1,113 @@
+/* Background for all auth-related pages */
+.auth-page {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('src/img/BG1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.auth-page .auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px;
+    max-width: 400px;
+    width: 90%;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+}
+
+.auth-page .logo {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+/* .auth-page .auth-input  {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+} */
+.auth-container {
+    overflow: hidden;
+    margin-left: 70px;
+
+    input{
+        padding: 8px;
+        font-size: 24px;
+        letter-spacing: 48px;
+        width: 240px;
+        outline: none;
+    }
+
+    .otp-column{
+        position: absolute;
+        top:0;
+        height: 44px;
+        width: 24px;
+        background-color: bisque;
+        border: 1px solid black;
+
+    }
+
+    .c1{
+        left: 24px;
+    }
+    .c2{
+        left: 94px;
+    }
+    .c3{
+        left: 156px;
+    }
+    .c4{
+        left: 216px;
+        width: 70px;
+    }
+
+}
+
+
+.auth-page .auth-button {
+    width: 240px;
+    padding: 12px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.auth-page .auth-button:hover {
+    background-color: #0056b3;
+}
+
+.auth-page .error-message {
+    color: red;
+    font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .auth-page .auth-container {
+        padding: 16px;
+    }
+
+    .auth-page .auth-input, .auth-page .auth-button {
+        padding: 10px;
+    }
+
+    .auth-page .logo {
+        max-width: 80px;
+    }
+}

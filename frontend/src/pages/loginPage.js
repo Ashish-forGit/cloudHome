@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import useLogin from '../hooks/useLogin';
 import { ImSoundcloud2 } from "react-icons/im";
-import '../../SignupPage.css';
+import '../../SignupPage.css'; // Adjust the path if necessary
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -42,29 +42,31 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="signup-container">
-      <ImSoundcloud2 />
-      <img src="./img/logo.png" alt="cloudHome" className="logo" />
-      <input
-        type="text"
-        placeholder="Email"
-        className="signup-input"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      {emailError && <div className="error-message">{emailError}</div>}
-      <input
-        type="password"
-        placeholder="Password"
-        className="signup-input"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      {passwordError && <div className="error-message">{passwordError}</div>}
-      {error && <div className="error-message">{error}</div>}
-      <button className="signup-button" onClick={handleSubmit} disabled={loading}>
-        {loading ? 'Logging in...' : 'Login'}
-      </button>
+    <div className="login-page">
+      <div className="signup-container">
+        <ImSoundcloud2 />
+        <img src="../img/logo.png" alt="cloudHome" className="logo" />
+        <input
+          type="text"
+          placeholder="Email"
+          className="signup-input"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        {emailError && <div className="error-message">{emailError}</div>}
+        <input
+          type="password"
+          placeholder="Password"
+          className="signup-input"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        {passwordError && <div className="error-message">{passwordError}</div>}
+        {error && <div className="error-message">{error}</div>}
+        <button className="signup-button" onClick={handleSubmit} disabled={loading}>
+          {loading ? 'Logging in...' : 'Login'}
+        </button>
+      </div>
     </div>
   );
 };

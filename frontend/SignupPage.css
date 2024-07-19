@@ -1,5 +1,5 @@
-.signup-page {
-    height: 100%;
+.signup-page, .login-page {
+    height: 100vh; /* Ensure full viewport height */
     margin: 0;
     display: flex;
     justify-content: center;
@@ -8,7 +8,7 @@
     background-size: cover;
   }
   
-  .signup-page .signup-container {
+  .signup-page .signup-container, .login-page .signup-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,12 +24,12 @@
     background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
   }
   
-  .signup-page .logo {
+  .signup-page .logo, .login-page .logo {
     max-width: 100px;
     margin-bottom: 20px;
   }
   
-  .signup-page .signup-input {
+  .signup-page .signup-input, .login-page .signup-input {
     width: 100%;
     padding: 12px;
     margin: 8px 0;
@@ -38,7 +38,7 @@
     border-radius: 4px;
   }
   
-  .signup-page .signup-button {
+  .signup-page .signup-button, .login-page .signup-button {
     width: 100%;
     padding: 12px;
     background-color: #007BFF;
@@ -49,26 +49,27 @@
     font-size: 16px;
   }
   
-  .signup-page .signup-button:hover {
+  .signup-page .signup-button:hover, .login-page .signup-button:hover {
     background-color: #0056b3;
   }
   
-  .signup-page .error-message {
+  .signup-page .error-message, .login-page .error-message {
     color: red;
     font-size: 12px;
   }
   
   /* Responsive Design */
   @media (max-width: 600px) {
-    .signup-page .signup-container {
+    .signup-page .signup-container, .login-page .signup-container {
       padding: 16px;
     }
   
-    .signup-page .signup-input, .signup-page .signup-button {
+    .signup-page .signup-input, .signup-page .signup-button,
+    .login-page .signup-input, .login-page .signup-button {
       padding: 10px;
     }
   
-    .signup-page .logo {
+    .signup-page .logo, .login-page .logo {
       max-width: 80px;
     }
   }
