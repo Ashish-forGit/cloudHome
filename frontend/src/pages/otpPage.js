@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { appLogout } from '../store/slices/authSlice';
 import '../../AuthPage.css';
 import { useSearchParams } from 'react-router-dom';
 import Navbar from '../components/navbar';
+import useGenerateNewOtp from '../hooks/usegenerateNewOtp';
 
 const OtpPage = () => {
 
     const { email } = useSelector( (e)=>e.auth )
   const dispatch = useDispatch();
   const [otp, setOtp] = useState('');
+  const { generateNewOtp } = useGenerateNewOtp();
 
   const handleSubmit = () => {
     if(otp.length<4){
@@ -17,7 +19,8 @@ const OtpPage = () => {
     }else{
         const num = parseInt(otp);
         if (num >= 1000 && num <=9999) {
-            alert("correct otp is "+num)
+
+            
         } else{
             alert('Invalid otp! Please enter correct otp')
         }
@@ -28,6 +31,10 @@ const OtpPage = () => {
   const handleLogout = () => {
     dispatch(appLogout());
   };
+
+  useEffect(() => {
+    generateNewOtp();
+}, []);
 
   return (
     <>
@@ -42,10 +49,10 @@ const OtpPage = () => {
           onChange={(e) => setOtp(e.target.value)}
           className="auth-input"
         />
-        <div className='otp-column c1'/>
+        {/* <div className='otp-column c1'/>
         <div className='otp-column c2'/>
         <div className='otp-column c3'/>
-        <div className='otp-column c4'/>
+        <div className='otp-column c4'/> */}
         <button onClick={handleSubmit} className="auth-button">
           Verify
         </button>

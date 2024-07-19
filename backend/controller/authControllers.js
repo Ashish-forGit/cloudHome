@@ -8,7 +8,7 @@ const generateJWTToken = (obj) => {
     try {
         const token = jwt.sign(
             {
-                exp: 120, // seconds
+                exp: Math.floor(Date.now() / 1000) + 60 * 60, // seconds
                 data: obj
             },
             process.env.JWT_SECRET_KEY

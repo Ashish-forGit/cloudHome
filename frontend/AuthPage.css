@@ -39,41 +39,43 @@
     border-radius: 4px;
 } */
 .auth-container {
-    overflow: hidden;
+    position: relative;
     margin-left: 70px;
 
     input{
         padding: 8px;
         font-size: 24px;
         letter-spacing: 48px;
-        width: 240px;
+        width: 280px !important;
+        border: none;
         outline: none;
     }
 
     .otp-column{
         position: absolute;
-        top:0;
+        top: 0;
+
         height: 44px;
         width: 24px;
-        background-color: bisque;
-        border: 1px solid black;
-
+        background-color: blanchedalmond;
     }
 
     .c1{
-        left: 24px;
+        left: 34px;
     }
+
     .c2{
         left: 94px;
     }
+
     .c3{
         left: 156px;
     }
+
     .c4{
         left: 216px;
         width: 70px;
     }
-
 }
 
 
