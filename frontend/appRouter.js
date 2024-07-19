@@ -26,9 +26,7 @@ const AppRouter = () => {
     },
     {
       path: "/",
-      element: isAuthorized ? 
-                            <> isEmailVerified ? <HomePage/> : <Navigate to="/otp" /> </> 
-                             : <Navigate to="/login" />
+      element: isAuthorized ? (isEmailVerified ? <HomePage /> : <Navigate to="/otp" />) : <Navigate to="/login" />,
     }
   ]);
 

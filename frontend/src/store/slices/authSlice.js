@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 
 const authSlice = createSlice({
     name: 'auth',
@@ -12,31 +12,36 @@ const authSlice = createSlice({
         : false
     },
     reducers: {
-        appLogin: (state, action)=>{
-
+        appLogin: (state, action) => {
             const { payload } = action;
-            const {data} = payload;
-            const {token, user} = data
+            const { data } = payload;
+            const { token, user } = data;
             state.isAuthorized = true;  
-            state.email= user.email;  // action.payload.data.user.email
+            state.email = user.email;
             state.name = user.name;
             state.token = token;
             state.isEmailVerified = user.isEmailVerified;
-            localStorage.setItem("userInfo", JSON.stringify(data))
-
+            localStorage.setItem("userInfo", JSON.stringify(data));
         },
-        appLogout: (state)=>{
+        appLogout: (state) => {
             state.isAuthorized = false;
-            state.email= null;  
+            state.email = null;
             state.name = null;
             state.token = null;
             state.isEmailVerified = false;
             localStorage.removeItem("userInfo");
         },
+        setEmailVerified: (state, action) => {
+            state.isEmailVerified = true;
+            const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+            if (userInfo) {
+                userInfo.user.isEmailVerified = true;
+                localStorage.setItem("userInfo", JSON.stringify(userInfo));
+            }
+        }
     }
-            
 });
 
-export const { appLogin, appLogout } = authSlice.actions;
+export const { appLogin, appLogout, setEmailVerified } = authSlice.actions;
 const authReducer = authSlice.reducer;
 export default authReducer;

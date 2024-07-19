@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { appLogout } from '../store/slices/authSlice';
 import '../../AuthPage.css';
-import { useSearchParams } from 'react-router-dom';
 import Navbar from '../components/navbar';
 import useGenerateNewOtp from '../hooks/usegenerateNewOtp';
+import useVerifyOtp from '../hooks/useVerifyOtp';
 
 const OtpPage = () => {
 
@@ -12,15 +11,15 @@ const OtpPage = () => {
   const dispatch = useDispatch();
   const [otp, setOtp] = useState('');
   const { generateNewOtp } = useGenerateNewOtp();
+  const { verifyOtp } = useVerifyOtp();
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if(otp.length<4){
         alert('Please enter 4 digit OTP')
     }else{
         const num = parseInt(otp);
         if (num >= 1000 && num <=9999) {
-
-            
+          await verifyOtp(email, otp);
         } else{
             alert('Invalid otp! Please enter correct otp')
         }
@@ -28,9 +27,7 @@ const OtpPage = () => {
     
   };
 
-  const handleLogout = () => {
-    dispatch(appLogout());
-  };
+
 
   useEffect(() => {
     generateNewOtp();
@@ -39,26 +36,17 @@ const OtpPage = () => {
   return (
     <>
     <Navbar/>
-    <div className="auth-page">
-      <div className="auth-container">
-        <p>Email: {email}</p>
-        <input
-            maxLength={4}
-          type="text"
-          value={otp}
-          onChange={(e) => setOtp(e.target.value)}
-          className="auth-input"
-        />
-        {/* <div className='otp-column c1'/>
-        <div className='otp-column c2'/>
-        <div className='otp-column c3'/>
-        <div className='otp-column c4'/> */}
-        <button onClick={handleSubmit} className="auth-button">
-          Verify
-        </button>
-        
-      </div>
-    </div>
+    <div className="otp-page-container">
+                <p>Email : {email}</p>
+                <div className="otp-input-container">
+                    <input maxLength={4} type="text" value={otp} onChange={(e) => setOtp(e.target.value)} />
+                    <div className="otp-column c1" />
+                    <div className="otp-column c2" />
+                    <div className="otp-column c3" />
+                    <div className="otp-column c4" />
+                </div>
+                <button onClick={handleSubmit}>Verify Otp</button>
+            </div>
     </>
   );
 };

@@ -89,7 +89,69 @@ const saveOtpToDatabase = async (email, userId, otp) => {
     }
 };
 
+const verifyOtp = async (req, res) => {
+    try {
+        const { email, otp } = req.body; 
+        console.log("---> " ,email, otp);
+
+        // Find OTP entry by email
+        const otpEntry = await OtpModel.findOne({ email });
+
+        if (!otpEntry) {
+            return res.status(400).json({
+                status: 'fail',
+                message: 'OTP not found',
+                data: {},
+            });
+        }
+
+         // Debug logs
+         console.log(`Current Time: ${new Date().toISOString()}`);
+         console.log(`Expires At: ${otpEntry.expiresAt.toISOString()}`);
+
+        // Check if OTP is expired
+        if (otpEntry.expiresAt < Date.now()) {
+            return res.status(400).json({
+                status: 'fail',
+                message: 'OTP has expired',
+                data: {},
+            });
+        }
+
+        // Verify OTP
+        const isValidOtp = await otpEntry.verifyOtp(otp);
+
+        if (!isValidOtp) {
+            return res.status(400).json({
+                status: 'fail',
+                message: 'Invalid OTP',
+                data: {},
+            });
+        }
+
+        // Mark OTP as verified
+        otpEntry.isVerified = true;
+
+        await otpEntry.save();
+
+        return res.status(200).json({
+            status: 'success',
+            message: 'OTP verified successfully',
+            data: {},
+        });
+
+    } catch (err) {
+        console.error(err);
+        return res.status(500).json({
+            status: 'fail',
+            message: 'Internal Server Error',
+            data: err,
+        });
+    }
+};
+
+;
 
 
 
-module.exports = { generateOtp };
+module.exports = { generateOtp, verifyOtp };
