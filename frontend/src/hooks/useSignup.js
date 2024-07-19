@@ -1,4 +1,9 @@
+
+import { useNavigate } from "react-router-dom";
+
 const useSignup = () => {
+    const navigate = useNavigate()
+
     const signup = async ({ email, password }) => {
       try {
         const URL = process.env.BACKEND_URL;
@@ -11,6 +16,9 @@ const useSignup = () => {
         });
         const data = await res.json();
         console.log(data);
+        if (data.status == "success") {
+            navigate('/login')
+        }
       } catch (err) {
         alert('Signup error: ' + err.message);
       }

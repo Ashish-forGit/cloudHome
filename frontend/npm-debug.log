@@ -1,0 +1,483 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\ashis\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '--json',
+1 verbose cli   '--save-dev',
+1 verbose cli   'string_decoder@^1.3.0'
+1 verbose cli ]
+2 info using npm@2.15.12
+3 info using node@v20.11.0
+4 verbose install initial load of C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\package.json
+5 warn package.json frontend@1.0.0 No repository field.
+6 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\abortcontroller-polyfill\package.json
+7 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\ansi-styles\package.json
+8 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\argparse\package.json
+9 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\asynckit\package.json
+10 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\axios\package.json
+11 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\base-x\package.json
+12 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\boolbase\package.json
+13 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\braces\package.json
+14 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\browserify-zlib\package.json
+15 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\browserslist\package.json
+16 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\buffer\package.json
+17 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\callsites\package.json
+18 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\caniuse-lite\package.json
+19 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\chalk\package.json
+20 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\chrome-trace-event\package.json
+21 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\clone\package.json
+22 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\cloudinary\package.json
+23 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\clsx\package.json
+24 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\color-convert\package.json
+25 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\color-name\package.json
+26 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\combined-stream\package.json
+27 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\commander\package.json
+28 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\cosmiconfig\package.json
+29 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\crypto-browserify\package.json
+30 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\css-select\package.json
+31 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\css-tree\package.json
+32 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\css-what\package.json
+33 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\csso\package.json
+34 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\delayed-stream\package.json
+35 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\detect-libc\package.json
+36 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\dom-serializer\package.json
+37 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\domelementtype\package.json
+38 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\domhandler\package.json
+39 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\domutils\package.json
+40 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\dotenv\package.json
+41 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\dotenv-expand\package.json
+42 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\electron-to-chromium\package.json
+43 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\entities\package.json
+44 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\env-paths\package.json
+45 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\error-ex\package.json
+46 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\escalade\package.json
+47 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\escape-string-regexp\package.json
+48 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\events\package.json
+49 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\fill-range\package.json
+50 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\follow-redirects\package.json
+51 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\form-data\package.json
+52 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\get-port\package.json
+53 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\globals\package.json
+54 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\has-flag\package.json
+55 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\htmlnano\package.json
+56 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\htmlparser2\package.json
+57 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\immer\package.json
+58 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\import-fresh\package.json
+59 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\is-arrayish\package.json
+60 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\is-extglob\package.json
+61 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\is-glob\package.json
+62 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\is-json\package.json
+63 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\is-number\package.json
+64 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\js-tokens\package.json
+65 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\js-yaml\package.json
+66 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\json-parse-even-better-errors\package.json
+67 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\json5\package.json
+68 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\lightningcss\package.json
+69 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\lightningcss-win32-x64-msvc\package.json
+70 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\lines-and-columns\package.json
+71 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\lmdb\package.json
+72 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\lodash\package.json
+73 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\loose-envify\package.json
+74 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\mdn-data\package.json
+75 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\micromatch\package.json
+76 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\mime-db\package.json
+77 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\mime-types\package.json
+78 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\msgpackr\package.json
+79 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\msgpackr-extract\package.json
+80 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\node-addon-api\package.json
+81 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\node-gyp-build-optional-packages\package.json
+82 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\node-releases\package.json
+83 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\nth-check\package.json
+84 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\nullthrows\package.json
+85 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\ordered-binary\package.json
+86 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\parcel\package.json
+87 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\parent-module\package.json
+88 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\parse-json\package.json
+89 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\path-browserify\package.json
+90 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\picocolors\package.json
+91 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\picomatch\package.json
+92 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\postcss-value-parser\package.json
+93 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\posthtml\package.json
+94 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\posthtml-parser\package.json
+95 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\posthtml-render\package.json
+96 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\proxy-from-env\package.json
+97 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\q\package.json
+98 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\querystring-es3\package.json
+99 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\react\package.json
+100 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\react-dom\package.json
+101 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\react-error-overlay\package.json
+102 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\react-icons\package.json
+103 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\react-redux\package.json
+104 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\react-refresh\package.json
+105 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\react-router\package.json
+106 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\react-router-dom\package.json
+107 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\react-toastify\package.json
+108 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\redux\package.json
+109 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\redux-thunk\package.json
+110 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\regenerator-runtime\package.json
+111 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\reselect\package.json
+112 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\resolve-from\package.json
+113 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\safe-buffer\package.json
+114 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\scheduler\package.json
+115 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\semver\package.json
+116 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\source-map\package.json
+117 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\srcset\package.json
+118 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\stable\package.json
+119 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\stream-browserify\package.json
+120 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\stream-http\package.json
+121 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\supports-color\package.json
+122 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\svgo\package.json
+123 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\term-size\package.json
+124 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\timsort\package.json
+125 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\to-regex-range\package.json
+126 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\tslib\package.json
+127 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\type-fest\package.json
+128 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\update-browserslist-db\package.json
+129 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\url\package.json
+130 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\use-sync-external-store\package.json
+131 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\util\package.json
+132 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\utility-types\package.json
+133 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\weak-lru-cache\package.json
+134 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@babel\code-frame\package.json
+135 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@babel\helper-validator-identifier\package.json
+136 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@babel\highlight\package.json
+137 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@mischnic\json-sourcemap\package.json
+138 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@lezer\common\package.json
+139 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@lezer\lr\package.json
+140 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@lmdb\lmdb-win32-x64\package.json
+141 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@reduxjs\toolkit\package.json
+142 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\bundler-default\package.json
+143 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\cache\package.json
+144 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\codeframe\package.json
+145 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\compressor-raw\package.json
+146 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\config-default\package.json
+147 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\core\package.json
+148 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\diagnostic\package.json
+149 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\events\package.json
+150 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\fs\package.json
+151 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\graph\package.json
+152 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\logger\package.json
+153 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\markdown-ansi\package.json
+154 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\namer-default\package.json
+155 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\node-resolver-core\package.json
+156 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\optimizer-css\package.json
+157 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\optimizer-htmlnano\package.json
+158 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\optimizer-image\package.json
+159 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\optimizer-svgo\package.json
+160 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\optimizer-swc\package.json
+161 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\package-manager\package.json
+162 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\packager-css\package.json
+163 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\packager-html\package.json
+164 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\packager-js\package.json
+165 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\packager-raw\package.json
+166 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\packager-svg\package.json
+167 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\packager-wasm\package.json
+168 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\plugin\package.json
+169 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\profiler\package.json
+170 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\reporter-cli\package.json
+171 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\reporter-dev-server\package.json
+172 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\reporter-tracer\package.json
+173 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\resolver-default\package.json
+174 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\runtime-browser-hmr\package.json
+175 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\runtime-js\package.json
+176 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\runtime-react-refresh\package.json
+177 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\runtime-service-worker\package.json
+178 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\rust\package.json
+179 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\source-map\package.json
+180 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\transformer-babel\package.json
+181 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\transformer-css\package.json
+182 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\transformer-html\package.json
+183 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\transformer-image\package.json
+184 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\transformer-js\package.json
+185 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\transformer-json\package.json
+186 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\transformer-postcss\package.json
+187 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\transformer-posthtml\package.json
+188 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\transformer-raw\package.json
+189 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\transformer-react-refresh-wrap\package.json
+190 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\transformer-svg\package.json
+191 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\types\package.json
+192 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\utils\package.json
+193 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\watcher\package.json
+194 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\watcher-win32-x64\package.json
+195 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@parcel\workers\package.json
+196 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@msgpackr-extract\msgpackr-extract-win32-x64\package.json
+197 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@trysound\sax\package.json
+198 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@swc\core\package.json
+199 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@swc\core-win32-x64-msvc\package.json
+200 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@swc\counter\package.json
+201 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@swc\helpers\package.json
+202 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@swc\types\package.json
+203 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@remix-run\router\package.json
+204 verbose installManyTop reading scoped package data from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\@types\use-sync-external-store\package.json
+205 info package.json buffer@6.0.3 buffer is also the name of a node core module.
+206 info package.json events@3.3.0 events is also the name of a node core module.
+207 info package.json querystring-es3@0.2.1 No license field.
+208 info package.json url@0.11.3 url is also the name of a node core module.
+209 info package.json util@0.12.5 util is also the name of a node core module.
+210 info package.json @parcel/bundler-default@2.12.0 No description
+211 info package.json @parcel/bundler-default@2.12.0 No README data
+212 info package.json @parcel/codeframe@2.12.0 No README data
+213 info package.json @parcel/compressor-raw@2.12.0 No description
+214 info package.json @parcel/compressor-raw@2.12.0 No README data
+215 info package.json @parcel/cache@2.12.0 No description
+216 info package.json @parcel/cache@2.12.0 No README data
+217 info package.json @parcel/config-default@2.12.0 No description
+218 info package.json @parcel/config-default@2.12.0 No README data
+219 info package.json @parcel/core@2.12.0 No description
+220 info package.json @parcel/core@2.12.0 No README data
+221 info package.json @parcel/events@2.12.0 No description
+222 info package.json @parcel/events@2.12.0 No README data
+223 info package.json @parcel/diagnostic@2.12.0 No description
+224 info package.json @parcel/diagnostic@2.12.0 No README data
+225 info package.json @parcel/graph@3.2.0 No README data
+226 info package.json @parcel/fs@2.12.0 No README data
+227 info package.json @parcel/markdown-ansi@2.12.0 No README data
+228 info package.json @parcel/logger@2.12.0 No README data
+229 info package.json @parcel/node-resolver-core@3.3.0 No description
+230 info package.json @parcel/node-resolver-core@3.3.0 No README data
+231 info package.json @parcel/namer-default@2.12.0 No description
+232 info package.json @parcel/namer-default@2.12.0 No README data
+233 info package.json @parcel/optimizer-css@2.12.0 No description
+234 info package.json @parcel/optimizer-css@2.12.0 No README data
+235 info package.json @parcel/optimizer-svgo@2.12.0 No description
+236 info package.json @parcel/optimizer-svgo@2.12.0 No README data
+237 info package.json @parcel/optimizer-htmlnano@2.12.0 No description
+238 info package.json @parcel/optimizer-htmlnano@2.12.0 No README data
+239 info package.json @parcel/optimizer-swc@2.12.0 No description
+240 info package.json @parcel/optimizer-swc@2.12.0 No README data
+241 info package.json @parcel/optimizer-image@2.12.0 No description
+242 info package.json @parcel/optimizer-image@2.12.0 No README data
+243 info package.json @parcel/package-manager@2.12.0 No README data
+244 info package.json @parcel/packager-css@2.12.0 No description
+245 info package.json @parcel/packager-css@2.12.0 No README data
+246 info package.json @parcel/packager-js@2.12.0 No description
+247 info package.json @parcel/packager-js@2.12.0 No README data
+248 info package.json @parcel/packager-raw@2.12.0 No description
+249 info package.json @parcel/packager-raw@2.12.0 No README data
+250 info package.json @parcel/packager-html@2.12.0 No description
+251 info package.json @parcel/packager-html@2.12.0 No README data
+252 info package.json @parcel/profiler@2.12.0 No README data
+253 info package.json @parcel/packager-wasm@2.12.0 No description
+254 info package.json @parcel/packager-wasm@2.12.0 No README data
+255 info package.json @parcel/packager-svg@2.12.0 No description
+256 info package.json @parcel/packager-svg@2.12.0 No README data
+257 info package.json @parcel/plugin@2.12.0 No description
+258 info package.json @parcel/plugin@2.12.0 No README data
+259 info package.json @parcel/reporter-cli@2.12.0 No description
+260 info package.json @parcel/reporter-cli@2.12.0 No README data
+261 info package.json @parcel/reporter-dev-server@2.12.0 No README data
+262 info package.json @parcel/reporter-tracer@2.12.0 No description
+263 info package.json @parcel/reporter-tracer@2.12.0 No README data
+264 info package.json @parcel/resolver-default@2.12.0 No description
+265 info package.json @parcel/resolver-default@2.12.0 No README data
+266 info package.json @parcel/runtime-browser-hmr@2.12.0 No description
+267 info package.json @parcel/runtime-browser-hmr@2.12.0 No README data
+268 info package.json @parcel/runtime-js@2.12.0 No description
+269 info package.json @parcel/runtime-js@2.12.0 No README data
+270 info package.json @parcel/runtime-service-worker@2.12.0 No description
+271 info package.json @parcel/runtime-service-worker@2.12.0 No README data
+272 info package.json @parcel/runtime-react-refresh@2.12.0 No description
+273 info package.json @parcel/runtime-react-refresh@2.12.0 No README data
+274 info package.json @parcel/rust@2.12.0 No description
+275 info package.json @parcel/rust@2.12.0 No README data
+276 info package.json @parcel/transformer-html@2.12.0 No description
+277 info package.json @parcel/transformer-html@2.12.0 No README data
+278 info package.json @parcel/transformer-css@2.12.0 No description
+279 info package.json @parcel/transformer-css@2.12.0 No README data
+280 info package.json @parcel/transformer-image@2.12.0 No description
+281 info package.json @parcel/transformer-image@2.12.0 No README data
+282 info package.json @parcel/transformer-js@2.12.0 No description
+283 info package.json @parcel/transformer-js@2.12.0 No README data
+284 info package.json @parcel/transformer-json@2.12.0 No description
+285 info package.json @parcel/transformer-json@2.12.0 No README data
+286 info package.json @parcel/transformer-postcss@2.12.0 No description
+287 info package.json @parcel/transformer-postcss@2.12.0 No README data
+288 info package.json @parcel/transformer-posthtml@2.12.0 No description
+289 info package.json @parcel/transformer-posthtml@2.12.0 No README data
+290 info package.json @parcel/transformer-react-refresh-wrap@2.12.0 No description
+291 info package.json @parcel/transformer-react-refresh-wrap@2.12.0 No README data
+292 info package.json @parcel/transformer-raw@2.12.0 No description
+293 info package.json @parcel/transformer-raw@2.12.0 No README data
+294 info package.json @parcel/types@2.12.0 No description
+295 info package.json @parcel/types@2.12.0 No README data
+296 info package.json @parcel/utils@2.12.0 No README data
+297 info package.json @parcel/transformer-svg@2.12.0 No description
+298 info package.json @parcel/transformer-svg@2.12.0 No README data
+299 info package.json @parcel/workers@2.12.0 No README data
+300 info package.json @swc/core@1.7.0 No README data
+301 info package.json @swc/helpers@0.5.12 No README data
+302 info package.json dotenv-expand@5.1.0 No repository field.
+303 verbose readDependencies loading dependencies from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\package.json
+304 silly cache add args [ 'string_decoder@^1.3.0', null ]
+305 verbose cache add spec string_decoder@^1.3.0
+306 silly cache add parsed spec Result {
+306 silly cache add   raw: 'string_decoder@^1.3.0',
+306 silly cache add   scope: null,
+306 silly cache add   name: 'string_decoder',
+306 silly cache add   rawSpec: '^1.3.0',
+306 silly cache add   spec: '>=1.3.0 <2.0.0',
+306 silly cache add   type: 'range'
+306 silly cache add }
+307 silly addNamed string_decoder@>=1.3.0 <2.0.0
+308 verbose addNamed ">=1.3.0 <2.0.0" is a valid semver range for string_decoder
+309 silly addNameRange { name: 'string_decoder', range: '>=1.3.0 <2.0.0', hasData: false }
+310 silly mapToRegistry name string_decoder
+311 silly mapToRegistry using default registry
+312 silly mapToRegistry registry https://registry.npmjs.org/
+313 silly mapToRegistry data Result {
+313 silly mapToRegistry   raw: 'string_decoder',
+313 silly mapToRegistry   scope: null,
+313 silly mapToRegistry   name: 'string_decoder',
+313 silly mapToRegistry   rawSpec: '',
+313 silly mapToRegistry   spec: 'latest',
+313 silly mapToRegistry   type: 'tag'
+313 silly mapToRegistry }
+314 silly mapToRegistry uri https://registry.npmjs.org/string_decoder
+315 verbose addNameRange registry:https://registry.npmjs.org/string_decoder not in flight; fetching
+316 verbose get https://registry.npmjs.org/string_decoder not expired, no request
+317 silly addNameRange number 2 { name: 'string_decoder', range: '>=1.3.0 <2.0.0', hasData: true }
+318 silly addNameRange versions [
+318 silly addNameRange   'string_decoder',
+318 silly addNameRange   [
+318 silly addNameRange     '0.0.0',     '0.0.1',
+318 silly addNameRange     '0.10.24',   '0.11.10',
+318 silly addNameRange     '0.10.25',   '0.11.10-1',
+318 silly addNameRange     '0.10.25-1', '0.10.31',
+318 silly addNameRange     '1.0.0',     '1.0.1',
+318 silly addNameRange     '1.0.2',     '1.0.3',
+318 silly addNameRange     '1.1.0',     '1.1.1',
+318 silly addNameRange     '1.2.0',     '1.3.0'
+318 silly addNameRange   ]
+318 silly addNameRange ]
+319 silly addNamed string_decoder@1.3.0
+320 verbose addNamed "1.3.0" is a plain semver version for string_decoder
+321 silly cache afterAdd string_decoder@1.3.0
+322 verbose afterAdd C:\Users\ashis\AppData\Roaming\npm-cache\string_decoder\1.3.0\package\package.json not in flight; writing
+323 verbose correctMkdir C:\Users\ashis\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+324 verbose afterAdd C:\Users\ashis\AppData\Roaming\npm-cache\string_decoder\1.3.0\package\package.json written
+325 silly install resolved [
+325 silly install resolved   {
+325 silly install resolved     name: 'string_decoder',
+325 silly install resolved     version: '1.3.0',
+325 silly install resolved     description: 'The string_decoder module from Node core',
+325 silly install resolved     main: 'lib/string_decoder.js',
+325 silly install resolved     dependencies: { 'safe-buffer': '~5.2.0' },
+325 silly install resolved     devDependencies: {
+325 silly install resolved       'babel-polyfill': '^6.23.0',
+325 silly install resolved       'core-util-is': '^1.0.2',
+325 silly install resolved       inherits: '^2.0.3',
+325 silly install resolved       tap: '~0.4.8'
+325 silly install resolved     },
+325 silly install resolved     scripts: {
+325 silly install resolved       test: 'tap test/parallel/*.js && node test/verify-dependencies',
+325 silly install resolved       ci: 'tap test/parallel/*.js test/ours/*.js --tap | tee test.tap && node test/verify-dependencies.js'
+325 silly install resolved     },
+325 silly install resolved     repository: { type: 'git', url: 'git://github.com/nodejs/string_decoder.git' },
+325 silly install resolved     homepage: 'https://github.com/nodejs/string_decoder',
+325 silly install resolved     keywords: [ 'string', 'decoder', 'browser', 'browserify' ],
+325 silly install resolved     license: 'MIT',
+325 silly install resolved     gitHead: '60db81e031c126112039157ba9437484b1329dff',
+325 silly install resolved     bugs: { url: 'https://github.com/nodejs/string_decoder/issues' },
+325 silly install resolved     _id: 'string_decoder@1.3.0',
+325 silly install resolved     _nodeVersion: '10.16.0',
+325 silly install resolved     _npmVersion: '6.10.2',
+325 silly install resolved     _npmUser: { name: 'matteo.collina', email: 'hello@matteocollina.com' },
+325 silly install resolved     dist: {
+325 silly install resolved       integrity: 'sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==',
+325 silly install resolved       shasum: '42f114594a46cf1a8e30b0a84f56c78c3edac21e',
+325 silly install resolved       tarball: 'https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz',
+325 silly install resolved       fileCount: 4,
+325 silly install resolved       unpackedSize: 14427,
+325 silly install resolved       'npm-signature': '-----BEGIN PGP SIGNATURE-----\r\n' +
+325 silly install resolved         'Version: OpenPGP.js v3.0.4\r\n' +
+325 silly install resolved         'Comment: https://openpgpjs.org\r\n' +
+325 silly install resolved         '\r\n' +
+325 silly install resolved         'wsFcBAEBCAAQBQJdSpflCRA9TVsSAnZWagAAVE8QAIBhyQ4HL/C719h6NHEm\n' +
+325 silly install resolved         'oaNdOGDpxw0zyapxhztRy+YPAEGVOAnS5L/VMQINojzPQQ8YTZDM5jQ5+NyC\n' +
+325 silly install resolved         'aVBB9KtQpCXftizA0DX5NbowL/k9s1ko+PFf0/hOPA4NWhZ9H5Vym+fNNMQJ\n' +
+325 silly install resolved         '+p0leE2ovcz0PVT8t8/IrntVTYRnhkDnkTJa9byWGZFiumoR4J/y0k/UfuR4\n' +
+325 silly install resolved         'qKF9NGgDURJrAvdkbaBEc4xs4ZM2Eqfevxki/Ia6cV2eWO/ssWzZXdS0oLfN\n' +
+325 silly install resolved         'cPieD7D80jTnrZNnh6iEdYFU6GQDgu8ovDURIVnI3qowB/aDBpMAMpKliY32\n' +
+325 silly install resolved         'MyB1VSAWPADAYwHaW6ldS23Bd1fFA9LJZtL4/2YmR5lTri14j6szJdXQZOCE\n' +
+325 silly install resolved         '26kivguwcdEsbsDkE4ayRJ6DNC18lvcmJCyBUpHPBzEFP8HvC+En3Cxd4wAE\n' +
+325 silly install resolved         '+6laaHp7x+Af3KV4cnBsKHsDpugmzi6SWKMjt9ymySNfefvzll7pI5p8mQD1\n' +
+325 silly install resolved         'iFM92XvnHY1RjXtuSwSHo/U8F9B/EogCC4kRSXSyq1xSDvZ530BaWsX27iv4\n' +
+325 silly install resolved         '2kbmRndn4pImKpIzFsUNaG8IAs90bw3mjc+dmMi7y/mbid5+xesX5RCztajK\n' +
+325 silly install resolved         'fFWZhV46ePff4+YFJVtCKR/m2LCu6dbSLHxTxpdFVfcjU83qnzpWGYdbHWwG\n' +
+325 silly install resolved         'xT/z\r\n' +
+325 silly install resolved         '=TD7t\r\n' +
+325 silly install resolved         '-----END PGP SIGNATURE-----\r\n',
+325 silly install resolved       signatures: [Array]
+325 silly install resolved     },
+325 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object] ],
+325 silly install resolved     directories: {},
+325 silly install resolved     _npmOperationalInternal: {
+325 silly install resolved       host: 's3://npm-registry-packages',
+325 silly install resolved       tmp: 'tmp/string_decoder_1.3.0_1565169636487_0.6257381665304729'
+325 silly install resolved     },
+325 silly install resolved     _hasShrinkwrap: false,
+325 silly install resolved     _shasum: '42f114594a46cf1a8e30b0a84f56c78c3edac21e',
+325 silly install resolved     _resolved: 'https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz',
+325 silly install resolved     _from: 'string_decoder@>=1.3.0 <2.0.0',
+325 silly install resolved     readme: 'ERROR: No README data found!'
+325 silly install resolved   }
+325 silly install resolved ]
+326 info install string_decoder@1.3.0 into C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend
+327 info installOne string_decoder@1.3.0
+328 verbose installOne of string_decoder to C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend not in flight; installing
+329 verbose correctMkdir C:\Users\ashis\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+330 verbose lock using C:\Users\ashis\AppData\Roaming\npm-cache\_locks\string-decoder-1fe4b1c4b10276ec.lock for C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\string_decoder
+331 silly install write writing string_decoder 1.3.0 to C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\string_decoder
+332 verbose unbuild node_modules\string_decoder
+333 silly gentlyRm C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\string_decoder is being purged from base C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend
+334 verbose gentlyRm don't care about contents; nuking C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\string_decoder
+335 verbose tar unpack C:\Users\ashis\AppData\Roaming\npm-cache\string_decoder\1.3.0\package.tgz
+336 verbose tar unpacking to C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\string_decoder
+337 silly gentlyRm C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\string_decoder is being purged
+338 verbose gentlyRm don't care about contents; nuking C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\string_decoder
+339 silly gunzTarPerm modes [ '777', '666' ]
+340 silly gunzTarPerm extractEntry LICENSE
+341 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+342 silly gunzTarPerm extractEntry lib/string_decoder.js
+343 silly gunzTarPerm modified mode [ 'lib/string_decoder.js', 420, 438 ]
+344 silly gunzTarPerm extractEntry package.json
+345 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+346 silly gunzTarPerm extractEntry README.md
+347 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+348 verbose write writing to C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\string_decoder\package.json
+349 info preinstall string_decoder@1.3.0
+350 verbose readDependencies loading dependencies from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\string_decoder\package.json
+351 verbose readDependencies loading dependencies from C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\string_decoder\package.json
+352 silly install resolved []
+353 verbose about to build C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\string_decoder
+354 info build C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\string_decoder
+355 info linkStuff string_decoder@1.3.0
+356 silly linkStuff string_decoder@1.3.0 has C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules as its parent node_modules
+357 verbose linkBins string_decoder@1.3.0
+358 verbose linkMans string_decoder@1.3.0
+359 verbose rebuildBundles string_decoder@1.3.0
+360 info install string_decoder@1.3.0
+361 info postinstall string_decoder@1.3.0
+362 verbose unlock done using C:\Users\ashis\AppData\Roaming\npm-cache\_locks\string-decoder-1fe4b1c4b10276ec.lock for C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\node_modules\string_decoder
+363 verbose validateInstall loading C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend\package.json for validation
+364 verbose stack Error: The package svgo@2.8.0 does not satisfy its siblings' peerDependencies requirements!
+364 verbose stack     at C:\Users\ashis\node_modules\npm\lib\install.js:125:32
+364 verbose stack     at C:\Users\ashis\node_modules\npm\lib\install.js:268:7
+364 verbose stack     at C:\Users\ashis\node_modules\npm\node_modules\read-installed\read-installed.js:142:5
+364 verbose stack     at C:\Users\ashis\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+364 verbose stack     at cb (C:\Users\ashis\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+364 verbose stack     at C:\Users\ashis\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+364 verbose stack     at cb (C:\Users\ashis\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+364 verbose stack     at C:\Users\ashis\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+364 verbose stack     at cb (C:\Users\ashis\node_modules\npm\node_modules\slide\lib\async-map.js:47:24)
+364 verbose stack     at C:\Users\ashis\node_modules\npm\node_modules\read-installed\read-installed.js:263:14
+365 verbose cwd C:\Users\ashis\OneDrive\Desktop\cloudHome\frontend
+366 error Windows_NT 10.0.22631
+367 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\ashis\\node_modules\\npm\\bin\\npm-cli.js" "install" "--json" "--save-dev" "string_decoder@^1.3.0"
+368 error node v20.11.0
+369 error npm  v2.15.12
+370 error code EPEERINVALID
+371 error peerinvalid The package svgo@2.8.0 does not satisfy its siblings' peerDependencies requirements!
+371 error peerinvalid Peer htmlnano@2.1.1 wants svgo@^3.0.2
+372 verbose exit [ 1, true ]
