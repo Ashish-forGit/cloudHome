@@ -47,6 +47,6 @@ otpSchema.methods.verifyOtp = async function (otp) {
     return bcrypt.compare(otp, this.otp);
 };
 
-const OtpModel = mongoose.model('OTPs', otpSchema);
+const otpModel = mongoose.model('OTPs', otpSchema);
 
-module.exports = OtpModel;
+module.exports = { otpModel } ;

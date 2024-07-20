@@ -1,9 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { setEmailVerified } from '../store/slices/authSlice';
+import { useNavigate } from 'react-router-dom';
 
 const useVerifyOtp = () => {
     const { token } = useSelector((state) => state.auth);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const verifyOtp = async (email, otp) => {
         try {
@@ -21,6 +23,11 @@ const useVerifyOtp = () => {
             if (data.status === "success") {
                 dispatch(setEmailVerified());
                 alert('OTP verified successfully');
+                navigate('/'); // Redirect to home screen
+            } else if (data.status === "already_verified") {
+                dispatch(setEmailVerified());
+                alert('User is already verified');
+                 // Redirect to home screen
             } else {
                 alert(data.message);
             }
