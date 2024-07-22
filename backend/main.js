@@ -5,6 +5,7 @@ const cors = require('cors');
 const { otpRouter } = require('./routes/otpRoutes.js');
 const { verify } = require('jsonwebtoken');
 const verifyToken = require('./middlewares/verifyToken.js');
+const { folderRouter } = require('./routes/folderRouter.js');
 require('./config/db.js')
 
 
@@ -18,6 +19,8 @@ app.use('/api/v1/auth', authRouter);
 app.use(verifyToken);
 
 app.use('/api/v1/otp', otpRouter);
+
+app.use('/api/v1/folder', folderRouter);
 
 app.listen(process.env.PORT,()=>{
     console.log(`----------Server started -> ${process.env.PORT}---------`);
