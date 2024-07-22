@@ -33,6 +33,16 @@ const authSlice = createSlice({
         },
         setEmailVerified: (state) => {
             state.isEmailVerified = true;
+            localStorage.setItem("userInfo", JSON.stringify({
+                user: {
+                    email: state.email,
+                    name: state.name,
+                    isEmailVerified: state.isEmailVerified,
+                    _id: state.userId
+                },
+                token: state.token
+            }));
+
             
         }
     }

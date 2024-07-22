@@ -20,9 +20,20 @@ const sendOTPMail = async (email, otp) => {
         const response = await mailer.sendMail({
             from: process.env.EMAIL_USER,
             to: email,
-            subject: 'OTP for login',
-            text: `Your OTP is ${otp}`
+            subject: 'OTP for Login',
+            text: `Your OTP is ${otp}`, // Plain text version
+            html: `
+                <div style="font-family: Arial, sans-serif; font-size: 16px; color: #333;">
+                    <h2 style="color: #4CAF50;">OTP for Login</h2>
+                    <p>Hello ,</p>
+                    <p>Your OTP for login is:</p>
+                    <p style="font-size: 24px; font-weight: bold; color: #FF5722;">${otp}</p>
+                    <p>Please use this OTP to complete your login process. It will expire soon, so make sure to use it promptly.</p>
+                    <p>Thank you,<br>cloudHome</p>
+                </div>
+            `
         });
+        
 
         console.log('Email sent:', response);
         return true;
