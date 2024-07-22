@@ -146,7 +146,7 @@ const verifyOtp = async (req, res) => {
         await userModel.findOneAndUpdate({ email }, { isEmailVerified: true})
 
         // Optionally, delete the used OTP from the database
-        // await otpModel.deleteOne({ _id: otpEntry._id });
+        await otpModel.deleteOne({ _id: otpEntry._id });
 
         return res.status(200).json({
             status: 'success',

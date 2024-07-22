@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { appLogout } from '../store/slices/authSlice';
+import { toast } from "react-toastify";
 
 const useGenerateNewOtp = () => {
     const { token } = useSelector((e) => e.auth);
@@ -15,8 +16,8 @@ const useGenerateNewOtp = () => {
             const data = await res.json();
 
             if (data.status === "success") {
-                alert(data.message);
-            }else if (data.message === "unauthorised") {
+                toast.success(data.message)
+            }else if (data.message === "Unauthorised") {
                 dispatch(appLogout);
                 
             } 

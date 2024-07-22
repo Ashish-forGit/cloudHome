@@ -14,7 +14,7 @@ const App = () => {
      <Provider store={appStore}>
             <AppRouter/>
       </Provider>
-      <ToastContainer />
+      <ToastContainer autoClose={2000} />
     </>
   );
 };

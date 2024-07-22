@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { appLogout, setEmailVerified } from '../store/slices/authSlice';
-import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+
 
 const useVerifyOtp = () => {
-    const { token } = useSelector((state) => state.auth);
+    const { token } = useSelector((e) => e.auth);
     const dispatch = useDispatch();
-    const navigate = useNavigate();
+   
 
     const verifyOtp = async (email, otp) => {
         try {
@@ -14,20 +15,21 @@ const useVerifyOtp = () => {
                 headers: {
                     'Content-Type': 'application/json',
                     Authorization: `Bearer ${token}`,
+                    
                 },
                 body: JSON.stringify({ email, otp }),
             });
 
             const data = await res.json();
 
-            if (data.message === "unauthorised") {
+            if (data.message === "Unauthorised") {
                 dispatch(appLogout);
                 
             } 
-            if (data.status === "success") {
+            else if (data.status === "success") {
                 dispatch(setEmailVerified());
-                alert('OTP verified successfully');
-                navigate('/'); // Redirect to home screen
+                toast.success("✅Email Verified")
+               
             } else {
                 alert(data.message);
             }
