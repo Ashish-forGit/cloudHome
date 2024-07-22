@@ -1,7 +1,9 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { appLogout } from '../store/slices/authSlice';
 
 const useGenerateNewOtp = () => {
     const { token } = useSelector((e) => e.auth);
+    const dispatch = useDispatch()
 
     const generateNewOtp = async () => {
         try {
@@ -14,7 +16,11 @@ const useGenerateNewOtp = () => {
 
             if (data.status === "success") {
                 alert(data.message);
-            } else {
+            }else if (data.message === "unauthorised") {
+                dispatch(appLogout);
+                
+            } 
+             else {
                 alert(data.message);
             }
         } catch (err) {

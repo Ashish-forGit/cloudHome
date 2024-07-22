@@ -16,36 +16,31 @@ const otpSchema = new mongoose.Schema({
         required: true,
         ref: 'Users', // Adjust the reference model name if needed
     },
-    expiresAt: {
-        type: Date,
-        default: () => Date.now() + 30 * 60 * 1000, // Expires in 10 minutes
-    },
     isVerified: {
         type: Boolean,
         default: false,
     },
-    createdAt: {
-        type: Date,
-        default: Date.now,
+    
     },
-    updatedAt: {
-        type: Date,
-        default: Date.now,
-    },
-});
+    { timestamps: true }
+);
 
-// Hash the OTP before saving
-otpSchema.pre('save', async function (next) {
-    if (this.isModified('otp')) {
-        this.otp = await bcrypt.hash(this.otp, 12);
-    }
-    next();
-});
+
 
 // Verify OTP method
-otpSchema.methods.verifyOtp = async function (otp) {
-    return bcrypt.compare(otp, this.otp);
+otpSchema.methods.verifyOtp = async function (otp, hashedOtp) {
+    return bcrypt.compare(otp, hashedOtp);
 };
+
+otpSchema.pre("save", async function (next) {
+    if (this.isModified("otp")) {
+        const hashedOtp = await bcrypt.hash(this.otp, 12);
+        this.otp = hashedOtp;
+        next();
+    } else {
+        next();
+    }
+});
 
 const otpModel = mongoose.model('OTPs', otpSchema);
 

@@ -5,7 +5,7 @@ const { userModel } = require('../model/userModel'); // Adjust the path as neede
 
 require('dotenv').config(); // Ensure this is called to load environment variables
 
-const sendOtpMail = async (email, otp) => {
+const sendOTPMail = async (email, otp) => {
     try {
         let mailer = nodemailer.createTransport({
             service: 'gmail',
@@ -34,61 +34,63 @@ const sendOtpMail = async (email, otp) => {
 
 const generateOtp = async (req, res) => {
     try {
-        const { email } = req.user; // Changed from req.user to req.body for consistency
+        const { email, userId} = req.user;
+        const restrictedTimeForOTP = 10 * 60 * 1000;
 
-        console.log(`Generating OTP for email: ${email}`);
-
-        // Find the user by email
-        const user = await userModel.findOne({ email });
-
-        if (!user) {
-            return res.status(404).json({
-                status: 'fail',
-                message: 'User not found',
-                data: {},
-            });
-        }
-
-        
-
-        // Generate random OTP
-        const otp = crypto.randomInt(1000, 9999).toString(); // Ensure OTP is a string
-
-        const isMailSent = await sendOtpMail(email, otp);
-
-        if (!isMailSent) {
-            return res.status(500).json({
-                status: "fail",
-                message: `OTP NOT sent to ${email}`,
-                data: {},
-            });
-        }
-
-        // Create an entry in the database with that OTP
-        await saveOtpToDatabase(email, user._id, otp);
-
-        return res.status(201).json({
-            status: "success",
-            message: `OTP sent to ${email}`,
-            data: {
-                email,
-                userId: user._id,
-                otp
+        const sentOPTMail = await otpModel.findOne({
+            email,
+            createdAt: {
+                $gte: Date.now() - restrictedTimeForOTP,
             },
         });
 
+        if (sentOPTMail) {
+            res.status(200);
+            res.json({
+                status: "success",
+                message: `Otp is already is sent to ${email}`,
+                data: {
+                    createdAt: sentOPTMail.createdAt,
+                },
+            });
+            return;
+        }
 
-        if (user.isEmailVerified) {
-            return res.status(200).json({
-                status: 'already_verified',
-                message: 'User is already verified',
+        console.log("sentOPTMail:", sentOPTMail);
+
+        const randomOTP = Math.floor(Math.random() * 9000 + 1000);
+
+        const isMailSent = await sendOTPMail(email, randomOTP);
+
+        if (!isMailSent) {
+            res.status(500);
+            res.json({
+                status: "Fail",
+                message: `Otp NOT sent to ${email}`,
                 data: {},
             });
+            return;
         }
-    } 
-    catch (err) {
-        console.log('Error generating OTP:', err);
-        return res.status(500).json({
+
+        await otpModel.create({
+            otp: randomOTP,
+            email,
+            userId
+        });
+
+        res.status(201);
+        res.json({
+            status: "success",
+            message: `Otp sent to ${email}`,
+            data: {
+                otp : randomOTP
+            },
+        });
+    } catch (err) {
+        console.log("----------------------------");
+        console.log(err);
+        console.log("----------------------------");
+        res.status(500).json({
             status: "fail",
             message: "Internal Server Error",
             data: err,
@@ -96,79 +98,55 @@ const generateOtp = async (req, res) => {
     }
 };
 
-const saveOtpToDatabase = async (email, userId, otp) => {
-    try {
-        
-
-        const newOtp = new otpModel({
-            email,
-            userId,
-            otp,
-            expiresAt: Date.now() + 10 * 60 * 1000 // OTP valid for 10 minutes
-        });
-
-        const savedOtp = await newOtp.save();
-        console.log('OTP saved:', savedOtp);
-    } catch (error) {
-        console.error("Error saving OTP to database:", error);
-        throw error;
-    }
-};
-
 const verifyOtp = async (req, res) => {
     try {
         const { email, otp } = req.body;
 
-        console.log(`Verifying OTP for email: ${email}, OTP: ${otp}`);
-
-        // Find the latest OTP entry by email
-        const otpEntry = await otpModel.findOne({ email }).sort({ createdAt: -1 });
+        
+        const restrictedTimeForOTP = 10 * 60 * 1000;
+        const otpEntry = await otpModel.findOne({
+            email,
+            createdAt: {
+                $gte: Date.now() - restrictedTimeForOTP,
+            },
+        });
 
         if (!otpEntry) {
-            return res.status(400).json({
-                status: 'fail',
-                message: 'OTP not found',
-                data: {},
-            });
-        }
-
-        // Check if OTP is expired
-        if (otpEntry.expiresAt < Date.now()) {
-            return res.status(400).json({
-                status: 'fail',
-                message: 'OTP has expired',
-                data: {},
-            });
-        }
-
-        // Verify OTP
-        const isValidOtp = await otpEntry.verifyOtp(otp);
-
-        if (!isValidOtp) {
-            return res.status(400).json({
-                status: 'fail',
-                message: 'Invalid OTP',
-                data: {},
-            });
-        }
-
-        // Find the user by email
-        const user = await userModel.findOne({ email });
-
-        if (!user) {
             return res.status(404).json({
                 status: 'fail',
-                message: 'User not found',
+                message: 'Verification failed! Please Generate New OTP',
                 data: {},
             });
         }
 
-        // Mark user as verified
-        user.isEmailVerified = true;
-        await user.save();
+
+        const hashedOtp =  otpEntry.otp;
+        const isCorrect = await otpEntry.verifyOtp(otp, hashedOtp)
+
+        // Check if OTP is expired
+        // if (otpEntry.expiresAt < Date.now()) {
+        //     return res.status(400).json({
+        //         status: 'fail',
+        //         message: 'OTP has expired',
+        //         data: {},
+        //     });
+        // }
+
+        // Verify OTP
+        // const isValidOtp = await otpEntry.verifyOtp(otp);
+
+        if (!isCorrect) {
+            return res.status(400).json({
+                status: 'fail',
+                message: 'Incorrect OTP',
+                data: {},
+            });
+        }
+
+        await userModel.findOneAndUpdate({ email }, { isEmailVerified: true})
 
         // Optionally, delete the used OTP from the database
-        await otpModel.deleteOne({ _id: otpEntry._id });
+        // await otpModel.deleteOne({ _id: otpEntry._id });
 
         return res.status(200).json({
             status: 'success',
