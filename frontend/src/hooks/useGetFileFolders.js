@@ -5,7 +5,7 @@ const useGetFileFolders = () => {
     const { token } = useSelector((e) => e.auth);
     const [fileFolders, setFileFolders] = useState([]);
 
-    const getFileFolders = async ( parentId =null ) => {
+    const getFileFolders = async (parentId = null) => {
         try {
             const res = await fetch(`${process.env.BACKEND_URL}/api/v1/file-folder`, {
                 method: "POST",
@@ -21,8 +21,6 @@ const useGetFileFolders = () => {
             alert(err.message);
         }
     };
-
-    
 
     return { getFileFolders, fileFolders };
 };

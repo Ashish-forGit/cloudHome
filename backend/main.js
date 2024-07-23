@@ -7,6 +7,7 @@ const { verify } = require('jsonwebtoken');
 const verifyToken = require('./middlewares/verifyToken.js');
 const { folderRouter } = require('./routes/folderRouter.js');
 const { fileFolderRouter } = require('./routes/fileFolderRoutes.js');
+const { fileRouter } = require('./routes/fileRoutes.js');
 
 require('./config/db.js')
 
@@ -25,6 +26,7 @@ app.use('/api/v1/otp', otpRouter);
 app.use('/api/v1/folder', folderRouter);
 
 app.use("/api/v1/file-folder", fileFolderRouter);
+app.use("/api/v1/file", fileRouter);
 
 app.listen(process.env.PORT,()=>{
     console.log(`----------Server started -> ${process.env.PORT}---------`);
