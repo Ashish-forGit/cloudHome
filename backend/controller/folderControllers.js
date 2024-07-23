@@ -2,12 +2,13 @@ const {fileFolderModel} = require("../model/fileSchema");
 
 const createFolder = async (req, res) => {
     try {
-        const { name } = req.body;
+        const { name, parentId } = req.body;
         const { userId} = req.user;
 
         const isFileNameExists = await fileFolderModel.findOne({
             name,
-            userId
+            userId,
+            parentId
         });
 
         if (isFileNameExists) {
@@ -20,6 +21,7 @@ const createFolder = async (req, res) => {
             name,
             userId,
             type: "folder",
+            parentId,
         });
 
         res.status(201);

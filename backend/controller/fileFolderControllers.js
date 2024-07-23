@@ -3,8 +3,9 @@ const {fileFolderModel} = require("../model/fileSchema");
 const getFileFolders = async (req, res) => {
     try {
         const { userId } = req.user;
+        const { parentId } = req.body;
 
-        const fileFolders = await fileFolderModel.find({ userId });
+        const fileFolders = await fileFolderModel.find({ userId, parentId });
 
         res.status(200).json({
             status: "success",
