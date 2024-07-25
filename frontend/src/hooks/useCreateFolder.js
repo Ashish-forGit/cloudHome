@@ -6,7 +6,7 @@ const useCreateFolder = () => {
   
     const createFolder = async ({name, parentId}) => {
       try {
-        const res = await fetch(`${process.env.BACKEND_URL}/api/v1/folder/create`, {
+        const res = await fetch(`https://cloudhome-lh9h.onrender.com/api/v1/folder/create`, {
           method: 'POST',
           body: JSON.stringify({
             name,

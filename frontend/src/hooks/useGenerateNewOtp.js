@@ -8,7 +8,7 @@ const useGenerateNewOtp = () => {
 
     const generateNewOtp = async () => {
         try {
-            const res = await fetch(`${process.env.BACKEND_URL}/api/v1/otp/generate`, {
+            const res = await fetch(`https://cloudhome-lh9h.onrender.com/api/v1/otp/generate`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

@@ -10,7 +10,7 @@ const useVerifyOtp = () => {
 
     const verifyOtp = async (email, otp) => {
         try {
-            const res = await fetch(`${process.env.BACKEND_URL}/api/v1/otp/verify`, {
+            const res = await fetch(`https://cloudhome-lh9h.onrender.com/api/v1/otp/verify`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

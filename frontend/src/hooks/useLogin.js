@@ -16,7 +16,7 @@ const useLogin = () => {
 
     try {
       const URL = process.env.BACKEND_URL;
-      const res = await fetch(`${URL}/api/v1/auth/login`, {
+      const res = await fetch(`https://cloudhome-lh9h.onrender.com/api/v1/auth/login`, {
         method: 'POST',
         body: JSON.stringify({ email, password }),
         headers: {
