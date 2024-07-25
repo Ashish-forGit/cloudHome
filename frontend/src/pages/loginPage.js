@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import useLogin from '../hooks/useLogin';
 import { ImSoundcloud2 } from "react-icons/im";
 import '../../SignupPage.css'; // Adjust the path if necessary
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -68,6 +69,7 @@ const LoginPage = () => {
         <button className="signup-button" onClick={handleSubmit} disabled={loading}>
           {loading ? 'Logging in...' : 'Login'}
         </button>
+        <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
       </div>
     </div>
   );

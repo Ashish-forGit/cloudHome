@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import useSignup from '../hooks/useSignup';
 import '../../SignupPage.css'; // Adjust the path if necessary
+import { Link } from 'react-router-dom';
 
 const SignupPage = () => {
   const [email, setEmail] = useState('');
@@ -66,6 +67,7 @@ const SignupPage = () => {
         <button onClick={handleSubmit} className="signup-button">
           Sign Up
         </button>
+        <p>Already have an account? <Link to="/login">Log In</Link></p>
       </div>
     </div>
   );
