@@ -63,7 +63,7 @@ const HomePage = () => {
         <div>
             <Navbar />
             <div className="homepage-main-container">
-                <h3>Welcome to Cloud Home {email}</h3>
+                <h3>Welcome to Cloud Home </h3>
                 <button className="create-folderbutton" onClick={handleAllowCreateFolder}>Create Folder</button>
                 <input className="file-upload-input" ref={inputRef} type="file" onChange={handleFileUpload} />
                 <ul className="breadcrumb">
