@@ -1,3 +1,4 @@
+import "../../HomePage.css";
 import { useEffect, useRef, useState } from "react";
 import Navbar from "../components/navbar";
 import useCreateFolder from "../hooks/useCreateFolder";
@@ -15,10 +16,9 @@ const HomePage = () => {
     const parentFolder = folderStructure[folderStructure.length - 1];
 
     const handleDoubleClick = (elem) => {
-        if (elem.type == 'folder'){
+        if (elem.type === 'folder') {
             setFolderStructure([...folderStructure, elem]);
         }
-        
     };
 
     const handleAllowCreateFolder = () => {
@@ -33,6 +33,7 @@ const HomePage = () => {
             });
             getFileFolders(parentFolder._id);
             setShowCreateFolder(false);
+            setNewFolder("");
         }
     };
 
@@ -44,12 +45,12 @@ const HomePage = () => {
         const newFolderStructure = folderStructure.filter((elem, idx) => idx <= clickIdx);
         setFolderStructure(newFolderStructure);
     };
-    //-----------------------------------------------------------------------
+
     const { isUploadAllowed, uploadFile } = useUploadFile();
     const handleFileUpload = async (e) => {
         if (isUploadAllowed) {
             const file = e.target.files;
-           await uploadFile({
+            await uploadFile({
                 file: file[0],
                 parentId: parentFolder._id,
             });
@@ -57,46 +58,39 @@ const HomePage = () => {
             alert("Uploading is already in progress. Please wait...");
         }
     };
-    //-----------------------------------------------------------------------
+
     return (
         <div>
             <Navbar />
             <div className="homepage-main-container">
-                <h3>Welcome to Cloud Home</h3>
-                <button onClick={handleAllowCreateFolder}>Create Folder</button>
+                <h3>Welcome to Cloud Home </h3>
+                <button className="create-folderbutton" onClick={handleAllowCreateFolder}>Create Folder</button>
                 <input className="file-upload-input" ref={inputRef} type="file" onChange={handleFileUpload} />
-                <ul style={{ display: "flex", padding: "24px", gap: "24px" }}>
-                    {folderStructure.map((elem, idx) => {
-                        return <li onClick={() => handleBackClick(idx)}>{elem.name}</li>;
-                    })}
+                <ul className="breadcrumb">
+                    {folderStructure.map((elem, idx) => (
+                        <li key={idx} onClick={() => handleBackClick(idx)}>{elem.name}⏭️</li>
+                    ))}
                 </ul>
-                <div>
+                <div className="files-path-showing">
                     {showCreateFolder && (
-                        <div style={{ margin: "24px", padding: "24px", backgroundColor: "yellow" }}>
-                            <input value={newFolder} onChange={(e) => setNewFolder(e.target.value)} />
+                        <div className="create-folder-popup">
+                            <input value={newFolder} onChange={(e) => setNewFolder(e.target.value)} placeholder="Folder Name" />
                             <button onClick={handleCreateFolder}>Create</button>
                             <button onClick={() => setShowCreateFolder(false)}>Cancel</button>
                         </div>
                     )}
                 </div>
-                <div>
-                    {fileFolders.map((elem) => {
-                        return (
-                            <div
-                                style={{
-                                    backgroundColor: elem.type === "folder" ? "yellow" : "orange",
-                                    border: "1px solid grey",
-                                    borderRadius: "8px",
-                                    width: "fit-content",
-                                    padding: "8px 16px",
-                                    margin: "8px 16px",
-                                }}
-                                onDoubleClick={() => handleDoubleClick(elem)}
-                            >
-                                <p>{elem.name}</p>
-                            </div>
-                        );
-                    })}
+                <div className="file-folder-card">
+                    {fileFolders.map((elem) => (
+                        <div
+                            key={elem._id}
+                            className="file-folder-item"
+                            onDoubleClick={() => handleDoubleClick(elem)}
+                        >
+                            <div className={elem.type === "folder" ? "folder-icon" : "file-icon"}></div>
+                            <p>{elem.name}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

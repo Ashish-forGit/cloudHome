@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 const useCreateFolder = () => {
     const { token } = useSelector((e) => e.auth);
@@ -18,7 +19,7 @@ const useCreateFolder = () => {
         });
 
         const data = await res.json();
-        alert(data.message);
+        toast.success("Folder Created")
       } catch (error) {
         alert(error.message) 
       }
