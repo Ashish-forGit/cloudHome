@@ -1,15 +1,114 @@
-.navbar-container{
+/* Navbar Styles */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.navbar-left-items {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 24px;
-    background-color: bisque;
+}
 
-    button {
-        background-color: brown;
-        padding: 5px;
-        color: white;
-        border-radius: 7px;
-    }
+.navbar-left-items h3 {
+    margin: 0;
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: #e1e1e1;
+}
+
+.navbar-right-items {
+    display: flex;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-container input {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.search-icon {
+    font-size: 20px;
+    color: #010202;
+    margin: 0 8px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.user-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.user-email {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 1;
+    background-color: white;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 130px;
+    z-index: 10;
+}
+
+.dropdown-menu button {
+    background: none;
+    border: none;
+    color: #131513;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown-menu button:hover {
+    background-color: #f1f1f1;
 }
 

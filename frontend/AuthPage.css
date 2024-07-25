@@ -1,4 +1,4 @@
-.otp-page-container{
+.otp-page-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,7 +8,11 @@
     background-color: blanchedalmond;
     gap: 24px;
     border-radius: 8px;
+    height: 70vh;
+    
 }
+
+
 
 .otp-input-container{
     position: relative;

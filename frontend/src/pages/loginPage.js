@@ -44,8 +44,10 @@ const LoginPage = () => {
   return (
     <div className="login-page">
       <div className="signup-container">
-        <ImSoundcloud2 />
-        <img src="../img/logo.png" alt="cloudHome" className="logo" />
+      <div className="logo-container">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYQwUhRIiizAYHYlPyiVC_g3D2jw4TR2QpyA&s" alt="Logo" className="logo" />
+        </div>
+        <h3>cloudHome</h3>
         <input
           type="text"
           placeholder="Email"
