@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import '../../AuthPage.css';
 import Navbar from '../components/navbar';
-import useGenerateNewOtp from '../hooks/usegenerateNewOtp';
+import useGenerateNewOtp from '../hooks/useGenerateNewOtp';
 import useVerifyOtp from '../hooks/useVerifyOtp';
 
 const OtpPage = () => {
